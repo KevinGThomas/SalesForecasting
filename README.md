@@ -1,5 +1,5 @@
 # SalesForecasting
-Consumer Packaged Goods Sales Forecasting project for ReconAI
+Consumer Packaged Goods Sales Forecasting project for ReconAI using Hierarchical Time-Series Forecasting
 
 # Overview
 This is the full code for 'CPG Sales Forecasting'. This code helps to identify current sales and predict the forecast for the rest of the year with the current sales numbers. It also identifies the GAP between Actual Sales+forecast versus the initial yearly plan. It identifies the market share in the retailers, products and regions perspective.
