@@ -36,8 +36,10 @@ A simple method for generating coherent forecasts is the bottom-up
 approach. This approach involves first generating forecasts for each
 series at the bottom-level, and then summing these to produce forecasts
 for all the series in the structure.
-(Image)
-For example, for the hierarchy given, we first generate h-step-ahead
+
+![bigco_graph](https://user-images.githubusercontent.com/20180559/48884364-3345c080-ee4a-11e8-9ac9-614931e6c1b7.png)
+
+For example, for the hierarchy given above, we first generate h-step-ahead
 forecasts for each of the bottom-level series:
 <p align="center"><h4>𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,h</sub> , 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub></h4></p>
 
@@ -46,5 +48,21 @@ the series:
 
 <h4>𝑦̃<sub>ℎ</sub> = 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub>
   
-# Results
+## Results
+* <h4>Retailer Forecast</h4>
+![retailer_total](https://user-images.githubusercontent.com/20180559/48884401-67b97c80-ee4a-11e8-93b0-ce6ddb0cdd51.png)
 
+* <h4>PlanVsActual</h4>
+![retailerplanvsactual](https://user-images.githubusercontent.com/20180559/48884424-81f35a80-ee4a-11e8-9056-b1632c414c7c.png)
+
+* <h4>Product Category</h4>
+![category_bar](https://user-images.githubusercontent.com/20180559/48884458-a2231980-ee4a-11e8-9642-0ff7275cad0d.png)
+
+* <h4>Retailer Region</h4>
+![region_bar](https://user-images.githubusercontent.com/20180559/48884492-bd8e2480-ee4a-11e8-8451-4d65fd079ffb.png)
+
+* <h4>Retailers</h4>
+![retailer_bar](https://user-images.githubusercontent.com/20180559/48884518-d4cd1200-ee4a-11e8-9dcd-54bbf9fef26d.png)
+
+* <h4>Products</h4>
+![upc_bar](https://user-images.githubusercontent.com/20180559/48884532-eca49600-ee4a-11e8-8658-78e093b0fbe3.png)
