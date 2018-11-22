@@ -31,7 +31,7 @@ are coherent across the aggregation structure. That is, we require
 forecasts to add up in a manner that is consistent with the aggregation
 structure of the collection of time series.
 
-### The Bottom-up Approach
+## The Bottom-up Approach
 A simple method for generating coherent forecasts is the bottom-up
 approach. This approach involves first generating forecasts for each
 series at the bottom-level, and then summing these to produce forecasts
@@ -41,12 +41,19 @@ for all the series in the structure.
 
 For example, for the hierarchy given above, we first generate h-step-ahead
 forecasts for each of the bottom-level series:
-<p align="center"><h4>𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,h</sub> , 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub></h4></p>
+<p align="center"><b>𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,h</sub> , 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> , 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub></b></p>
 
 Summing these, we get h-step-ahead coherent forecasts for the rest of
 the series:
 
-<h4>𝑦̃<sub>ℎ</sub> = 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub>
+<p align="center"><b>𝑦̃<sub>ℎ</sub> = 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> + 𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub></b></p>
+<p align="center"><b>𝑦̃<sub>𝑁,ℎ</sub> =𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶1,ℎ</sub> +𝑦̂<sub>𝐵𝐶_𝑁_𝑈𝑃𝐶2,ℎ</sub></b></p>
+<p align="center"><b>𝑦̃<sub>𝐸,ℎ</sub> =𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶1,ℎ</sub> +𝑦̂<sub>𝐵𝐶_𝐸_𝑈𝑃𝐶2,ℎ</sub></b></p>
+<p align="center"><b>𝑦̃<sub>𝑆,ℎ</sub> =𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶1,ℎ</sub> +𝑦̂<sub>𝐵𝐶_𝑆_𝑈𝑃𝐶2,ℎ</sub></b></p>
+<p align="center"><b>𝑦̃<sub>𝑊,ℎ</sub> =𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶1,ℎ</sub> +𝑦̂<sub>𝐵𝐶_𝑊_𝑈𝑃𝐶2,ℎ</sub></b></p>
+
+(We use the “tilde” notation (~) to indicate coherent forecasts).
+  
   
 ## Results
 * <h4>Retailer Forecast</h4>
