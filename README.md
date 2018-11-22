@@ -1,4 +1,4 @@
-# SalesForecasting
+# Sales Forecasting
 Consumer Packaged Goods Sales Forecasting project for ReconAI using Hierarchical Time-Series Forecasting
 
 # Overview
